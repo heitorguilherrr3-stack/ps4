@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayStation 4 — Media Player</title>
+    <meta name="description"content="Responsive Website PlayStation by Davi S."/>
+    <meta name="author" content="Davi" />
+    <link rel="icon" href="./assets/svg/logo.svg" type="image/svg+xml" />
+    <link href="./assets/css/google.css" rel="stylesheet"/>
+    <link href="./assets/boxicons.min.css" rel="stylesheet"/>
+    <link rel="preload" href="./assets/css/style.min.css" as="style" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.min.css">
+    <script src="./assets/js/jquery.min.js"></script>
+  </head>
+  <body>
+    <img id="imagem" src="./assets/img/start.png" alt="Start">
+  <div id="mensagem"> Press PS button or space </div>
+      	<div id="restoDaPagina" class="hide">
+            <!-- partial:index.partial.html -->
+              <header>
+                    <!-- <div id="psp"></div> -->
+                  <a href="#"> 
+                    <div id="plus" tabindex="0"></div> </a>
+                    <div id="info"></div>
+                    <div id="textInfo">God of War Ragnarok now available!</div>
+                    <div id="friends">+5</div>
+                    <div id="user"></div>
+                    <div id="userName">Player</div>
+                    <div id="trophies">‎ ‎ ‎ ‎ ‎ ‎  +6</div>
+                    <div id="clock" onload="currentTime()"></div>
+                </header>
+      
+                <div id="games" class="media-library">
+                    <a href="#" id="openVideoTile" aria-label="Selecionar vídeo MP4">
+                      <div class="squareGame animated bounceInLeft" tabindex="0">
+                        <div class="imgGame mediaTile" tabindex="0"></div>
+                        <div class="gameText">Abrir</div>
+                        <span class="gameTitle">Meu vídeo MP4</span>
+                      </div>
+                    </a>
+                    <input id="videoPicker" type="file" accept="video/mp4,video/*" hidden>
+                    <p class="libraryHint">Selecione um vídeo da galeria do celular para abrir em tela cheia</p>
+                </div>
+
+                <div class='box'>
+                  <div class='wave -one'></div>
+                  <div class='wave -two'></div>
+                  <div class='wave -three'></div>
+                </div>
+      </div>
+
+
+      <section id="videoPlayer" class="video-player" aria-hidden="true">
+        <video id="gameplayVideo" playsinline controls></video>
+        <div class="player-topbar"><span class="player-brand">PS4 MEDIA PLAYER</span><div class="player-actions"><button id="toggleControls" type="button">Controles</button><button id="closeVideo" type="button" aria-label="Fechar vídeo">✕</button></div></div>
+        <div id="virtualController" class="virtual-controller" aria-label="Controle virtual decorativo">
+          <div class="dpad" aria-label="Direcional"><button type="button" data-pad="up">▲</button><div><button type="button" data-pad="left">◀</button><button type="button" data-pad="center">●</button><button type="button" data-pad="right">▶</button></div><button type="button" data-pad="down">▼</button></div>
+          <div class="controller-center"><button type="button" class="touchpad">TOUCH<br>PAD</button><span class="controller-light"></span></div>
+          <div class="face-buttons" aria-label="Botões de ação"><button type="button" class="triangle">△</button><div><button type="button" class="square">□</button><button type="button" class="circle">○</button></div><button type="button" class="cross">×</button></div>
+          <div class="stick stick-left"><i></i></div><div class="stick stick-right"><i></i></div>
+          <div class="shoulder shoulder-left">L1 <span>L2</span></div><div class="shoulder shoulder-right">R1 <span>R2</span></div>
+        </div>
+        <div class="player-bottom"><span id="videoName">Nenhum vídeo selecionado</span><button id="pickAnother" type="button">Escolher outro vídeo</button></div>
+      </section>
+
+    <!--========== JAVASCRIPT ===========-->
+    <script  src="./assets/js/script.js"></script>
+    <script src="./media-player.js"></script>
+  </body>
+</html>
